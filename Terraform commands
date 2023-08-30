@@ -1,0 +1,32 @@
+To implement the Terraform code and create the AWS resources as described, follow these steps:
+
+1. Create a Directory:** Create a new directory on your local machine where you will store your Terraform configuration files. For example:
+   mkdir my-terraform-project
+   cd my-terraform-project
+
+2. Create a `.tf` File: Create a new file in this directory with a `.tf` extension (e.g., `main.tf`) and paste the Terraform code.
+
+3. Initialize the Terraform Working Directory: Run the following command to initialize Terraform and download the required plugins:
+
+   terraform init
+
+4. Plan the Infrastructure:  Run the following command to see what changes Terraform will make to your infrastructure:
+
+   terraform plan 
+
+   Review the plan output to make sure everything looks correct.
+
+5. Apply the Configuration: If the plan looks correct, apply the configuration to create the AWS resources:
+
+   terraform apply
+
+   Terraform will ask you to confirm the changes. Type "yes" and press Enter.
+
+6. Wait for Resources to be Created: Terraform will create the VPC, subnets, security group, and EC2 instance. This process may take a few minutes.
+
+7. Access the Created Resources: After Terraform has successfully created the resources, you can access your EC2 instance using SSH. You'll need the public IP address of the instance, which can be obtained from the AWS Console.
+
+8. Destroy Resources (Optional): If you want to tear down the resources, you can run:
+    terraform destroy
+    Again, confirm with "yes" when prompted.
+
